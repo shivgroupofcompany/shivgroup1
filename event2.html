@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+  <title>Modern Business - Start Bootstrap Template</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/modern-business.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<script>
+		function setImageSRC(imgNumber){
+			var image= document.getElementById("modalImage");
+			image.src="images\\event1\\"+imgNumber+".jpg";
+			$('#myModal').modal('show');
+		}
+	</script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="index.html">ShivGroups</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+			    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						EVENTS                       
+					   </a>
+                            
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                        <a class="dropdown-item" href="event1.html">BIRTHDAY</a>
+                        <a class="dropdown-item" href="event2.html">WEDDING</a>
+                        <a class="dropdown-item" href="event3.html">CORPORATE</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">CONTACT</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <!-- Page Content -->
+    <div class="container page-content">
+        <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+        <div class="row">
+            <div class="col-lg-6">
+                <h3>Book Now</h3><BR>
+                <form name="sentMessage" id="contactForm" novalidate>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Full Name</label>
+                            <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+                            <p class="help-block"></p>
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
+                        </div>
+                    </div>
+					<div class="control-group form-group">
+                        <div class="controls">
+                            <label>Event Date</label>
+                            <input type="date" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Email Address</label>
+                            <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Description</label>
+                            <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                        </div>
+                    </div>
+                    <div id="success"></div>
+                    <!-- For success/fail messages -->
+                    <button type="submit" class="btn cbtn">Book Now</button>
+                </form>
+            </div>
+			<div class="col-lg-6">					
+					<div class="col-lg-12">
+					   <h3 class="sub-heading">WEDDING EVENT</h3>
+						<p class="text-justify">
+							 With HappyWeddings, planning a wedding is that easy, Select A package, our wedding consultant will contact you swiftly to advise you on the most suitable options available within your selected package & within your budget. They can also answer any questions you might have. Convinced! Go ahead and book.
+						</p>						
+					</div>
+            </div>
+        </div><br>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->		
+ <div class="container"><br>
+ <H4>Galery</H4><hr>
+  <div class="row">
+    <div class="col-sm-6 col-md-3">     
+        <img class="img-responsive img-thumbnail" onclick="setImageSRC(1)" src="images\event1\1.jpg" alt="The awesome description" data-toggle="modal" >
+    </div>  
+	<div class="col-sm-6 col-md-3">     
+        <img class="img-responsive img-thumbnail" onclick="setImageSRC(2)" src="images\event1\2.jpg" alt="The awesome description" data-toggle="modal" >
+    </div>
+	<div class="col-sm-6 col-md-3">     
+        <img class="img-responsive img-thumbnail" onclick="setImageSRC(3)" src="images\event1\3.jpg" alt="The awesome description" data-toggle="modal" >
+    </div>
+	<div class="col-sm-6 col-md-3">     
+        <img class="img-responsive img-thumbnail" onclick="setImageSRC(4)" src="images\event1\4.jpg" alt="The awesome description" data-toggle="modal" >
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-md-3">     
+        <img class="img-responsive img-thumbnail" onclick="setImageSRC(1)" src="images\event1\1.jpg" alt="The awesome description" data-toggle="modal" >
+    </div>  
+	<div class="col-sm-6 col-md-3">     
+        <img class="img-responsive img-thumbnail" onclick="setImageSRC(2)" src="images\event1\1.jpg" alt="The awesome description" data-toggle="modal" >
+    </div>
+	<div class="col-sm-6 col-md-3">     
+        <img class="img-responsive img-thumbnail" onclick="setImageSRC(3)" src="images\event1\1.jpg" alt="The awesome description" data-toggle="modal" >
+    </div>
+	<div class="col-sm-6 col-md-3">     
+        <img class="img-responsive img-thumbnail" onclick="setImageSRC(4)" src="images\event1\1.jpg" alt="The awesome description" data-toggle="modal" >
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <img class="img-responsive img-thumbnail" style="width:100%" id="modalImage" src="" alt="The awesome description">
+        </div>
+		<div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+	
+   <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+        </div>
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+</body>
+</html>

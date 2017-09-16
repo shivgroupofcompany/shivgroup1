@@ -1,0 +1,127 @@
+/* font awesome */
+@import url('font-awesome.css');
+body {
+    padding-top: 54px;
+	font-family: 'Open Sans', Arial, sans-serif !important;
+}
+.carousel-item {
+    height: 65vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.portfolio-item {
+    margin-bottom: 30px;
+}
+.navbar-brand { 
+    padding-top: 0.25em;
+	padding-bottom: 0.25em;
+    font-size: 2em;
+    margin-left: 1.3em;
+    font-weight: 100 !important;
+    text-transform: uppercase;
+} 
+
+.bg-dark {
+  background-color:black !important;
+ }
+
+.nav-item  a{ 
+  padding-right:1.0em !important;
+ font-size:90% !important;
+ font-weight: 600 !important;
+ color:white !important;
+ transition: color .15s linear ;
+ -webkit-transition: color .15s linear;
+ -moz-transition: color .15s linear;
+}
+.nav-item a:hover ,.navbar-brand:hover {
+ color:#1BAC91 !important;
+}
+.navbar-collapse{
+    flex-basis: 85% ;
+}
+
+.dropdown-menu{
+	background-color:black;
+}
+.activator{
+ color: #007bff;
+}
+.activator i{
+  padding-top:2px;
+  font-size:140%;
+}
+.cbtn {
+  background-color: #1BAC91;
+  border-radius:1px;
+  color: white;
+}
+.cbtn:hover {
+  background: #27b99e;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  color: white;
+}
+/* Imitate a pressed effect for buttons */
+.cbtn:active {
+  top: 1px;
+  box-shadow: 0px 0px #ecece;
+}
+.col-centered{
+    float: none !important;
+    margin: 0 auto !important;
+	margin-bottom:15px !important;
+}
+.card{
+  /*box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);*/
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 0rem;
+}
+.cview{
+ color:#1BAC91;
+}
+.cview:hover{
+ color:#257d6d;
+}
+.form-control{
+border-radius: 0px; 
+}
+.form-control:focus{
+border-color: #1BAC91;/*#80bdff;*/
+}
+
+a.active{
+color:#1BAC91 !important;
+}
+.page-content{
+	margin-top:5em;
+}
+.sub-heading{
+	margin-bottom:0.5em;
+}
+
+
+
+
+
+
+
+.portfolio .thumbnail {
+    position: relative;
+}
+
+.portfolio .thumbnail:hover {
+    cursor: pointer;
+}
+
+.portfolio .caption {
+    bottom: 0;
+    position: absolute;
+}
+
+.portfolio .btn {
+    opacity: 0.75;
+}
