@@ -125,3 +125,8 @@ color:#1BAC91 !important;
 .portfolio .btn {
     opacity: 0.75;
 }
+
+.thumbnail-image-home-page {
+    width: 350px;
+    height: 231px;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Shiv Group events</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+	<link rel="stylesheet" href="../css/spin.css">
+
+	<script src="./fireapp/app.js"></script>
+	<script src="./fireapp/fileModel.directive.js"></script>
+	<script src="./fireapp/upload.controller.js"></script>
+</head>
+<body ng-app="shivGroup" ng-controller="uploadController" ng-init="init()" ng-cloak="">
+	
+	<nav class="navbar navbar-expand-lg navbar-custom">
+		<a class="navbar-brand mb-0 h1" ui-sref="home">Manage Images</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<i class="fa fa-bars" style="color: grey;font-size: 150%;"></i>
+		</button>
+	
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#" ng-click="changeView('bi')">Birthday Images</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#" ng-click="changeView('wi')">Wedding Images</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#" ng-click="changeView('ci')">Corporate Images</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#" ng-click="changeView('bt')">Birthday Thumbnail</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#" ng-click="changeView('wt')">Wedding Thumbnail</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#" ng-click="changeView('ct')">Corporate Thumbnail</a>
+				</li>
+			</ul>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href=""><span></span>Sign Out</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container-fluid">
+		<h1 class="text-primary">{{sectionNames[currentSection]}}</h1>
+	</div>
+	<div class="alert alert-danger w-50 m-auto text-center" ng-show="errorFetchingImages" role="alert">
+		Something went wrong :( Please refresh the page!!!
+	</div>
+	<div class="container-fluid">
+		<input type="file" accept="image/*" file-model="file" class="form-control d-inline-block col-md-3">
+		<button type="button" ng-click="uploadFile(file)" class="btn btn-success" 
+				ng-disabled="loading"><i ng-show="loading" class="fa fa-spinner spinning"></i> 
+				Upload File</button>
+		<hr>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6 col-md-3" ng-repeat="image in images track by $index">
+					<i class="fas fa-times text-danger" ng-click="removeImage(image)"></i>
+					<img ng-src="{{image.url}}" class="img-responsive img-thumbnail">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
