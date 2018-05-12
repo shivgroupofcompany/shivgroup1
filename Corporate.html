@@ -11,7 +11,12 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/modern-business.css" rel="stylesheet">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+    <script src="./js/fetchImages.js"></script>
 	<script>
 		function setImageSRC(imgNumber){
 			var image= document.getElementById("modalImage");
@@ -20,7 +25,7 @@
 		}
 	</script>
 </head>
-<body>
+<body ng-app="shivGroupWebsite" ng-controller="fetchController" ng-init="init('corporate')"></body>
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="index.html">ShivGroups</a>
@@ -106,33 +111,12 @@
     </div>
     <!-- /.container -->		
  <div class="container"><br>
- <H4>Galery</H4><hr>
-  <div class="row">
-    <div class="col-sm-6 col-md-3">     
-        <img class="img-responsive img-thumbnail" onclick="setImageSRC(1)" src="images\event1\1.jpg" alt="The awesome description" data-toggle="modal" >
-    </div>  
-	<div class="col-sm-6 col-md-3">     
-        <img class="img-responsive img-thumbnail" onclick="setImageSRC(2)" src="images\event1\2.jpg" alt="The awesome description" data-toggle="modal" >
-    </div>
-	<div class="col-sm-6 col-md-3">     
-        <img class="img-responsive img-thumbnail" onclick="setImageSRC(3)" src="images\event1\3.jpg" alt="The awesome description" data-toggle="modal" >
-    </div>
-	<div class="col-sm-6 col-md-3">     
-        <img class="img-responsive img-thumbnail" onclick="setImageSRC(4)" src="images\event1\4.jpg" alt="The awesome description" data-toggle="modal" >
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-6 col-md-3">     
-        <img class="img-responsive img-thumbnail" onclick="setImageSRC(1)" src="images\event1\1.jpg" alt="The awesome description" data-toggle="modal" >
-    </div>  
-	<div class="col-sm-6 col-md-3">     
-        <img class="img-responsive img-thumbnail" onclick="setImageSRC(2)" src="images\event1\1.jpg" alt="The awesome description" data-toggle="modal" >
-    </div>
-	<div class="col-sm-6 col-md-3">     
-        <img class="img-responsive img-thumbnail" onclick="setImageSRC(3)" src="images\event1\1.jpg" alt="The awesome description" data-toggle="modal" >
-    </div>
-	<div class="col-sm-6 col-md-3">     
-        <img class="img-responsive img-thumbnail" onclick="setImageSRC(4)" src="images\event1\1.jpg" alt="The awesome description" data-toggle="modal" >
+ <H4>Showcase</H4><hr>
+ <div class="row">
+    <div class="col-sm-6 col-md-3" ng-repeat="image in images track by $index">
+        <img class="img-responsive img-thumbnail" ng-src="{{image.url}}"
+            data-toggle="modal" >
+        <img  class="img-responsive img-thumbnail">
     </div>
   </div>
   <!-- Modal -->
