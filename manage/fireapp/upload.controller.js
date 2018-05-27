@@ -9,8 +9,10 @@ function uploadController($scope, $firebaseStorage, $firebaseAuth, $firebaseArra
 	$scope.uploadFile = uploadFile;
 	$scope.removeImage = removeImage;
 	$scope.changeView = changeView;
-
 	const vm = this;
+	vm.loggedIn = false;
+	vm.googleSignIn = googleSignIn;
+	vm.signOut = signOut;
 	
 	$scope.sectionNames = {
 		"bi": "Birthday Images",
@@ -24,12 +26,19 @@ function uploadController($scope, $firebaseStorage, $firebaseAuth, $firebaseArra
 	const thumbnailViews = ["bt", "wt", "ct"];
 
 	function init() {
-		$scope.loading = false;
-		$scope.currentSection = "ct";
-		updateRef($scope.currentSection);
-		
-		//TODO: figure the error scenario of the fetch
-		$scope.errorFetchingImages = false;
+		firebase.auth().onAuthStateChanged(function(user) {
+			if(user) {
+				vm.loggedIn = true;
+				$scope.loading = false;
+				$scope.currentSection = "ct";
+				updateRef($scope.currentSection);
+				
+				//TODO: figure the error scenario of the fetch
+				$scope.errorFetchingImages = false;
+			} else {
+				vm.loggedIn = false;
+			}
+		});
 	}
 
 	function updateRef(sectionCode) {
@@ -69,7 +78,12 @@ function uploadController($scope, $firebaseStorage, $firebaseAuth, $firebaseArra
 			})
 			.catch(function() {
 				$scope.loading = false;
+				$scope.$apply();
 			});
+		})
+		.catch(function() {
+			$scope.loading = false;
+			$scope.$apply();
 		});
 	}
 
@@ -80,5 +94,19 @@ function uploadController($scope, $firebaseStorage, $firebaseAuth, $firebaseArra
 
 	function isThumbnailView() {
 		return thumbnailViews.indexOf($scope.currentSection) >= 0;
+	}
+
+	function googleSignIn() {
+		firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider()).then(function(result) {
+		}).catch(function(error) {
+		});
+	}
+
+	function signOut() {
+		firebase.auth().signOut().then(function() {
+			vm.loggedIn = false;
+			$scope.$apply();
+		}, function(error) {
+		});
 	}
 }
