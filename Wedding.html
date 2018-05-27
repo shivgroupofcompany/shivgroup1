@@ -34,18 +34,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-			    <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						EVENTS                       
-					   </a>
-                            
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                        <a class="dropdown-item" href="Birthday.html">BIRTHDAY</a>
-                        <a class="dropdown-item" href="Wedding.html">WEDDING</a>
-                        <a class="dropdown-item" href="Corporate.html">CORPORATE</a>
-                    </div>
+			    <li class="nav-item">
+                    <a class="nav-link" href="Birthday.html">BIRTHDAY</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="Wedding.html">WEDDING</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Corporate.html">CORPORATE</a>
+                </li>
+                <li class="nav-item d-none">
                     <a class="nav-link" href="about.html">ABOUT</a>
                 </li>
                 <li class="nav-item">
@@ -55,87 +53,88 @@
             </ul>
         </div>
     </nav>
-    <!-- Page Content -->
-    <div class="container page-content">
-        <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-        <div class="row">
-            <div class="col-lg-6">
-                <h3>Book Now</h3><BR>
-                <form name="sentMessage" id="contactForm" novalidate>
-                    <div class="control-group form-group">
-                        <div class="controls">
-                            <label>Full Name</label>
-                            <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
-                            <p class="help-block"></p>
-                        </div>
+    
+
+<!-- Page Content -->
+<div class="container page-content">
+    <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+    <div class="row">
+        <div class="col-lg-6 d-none">
+            <h3>Book Now</h3><BR>
+            <form name="sentMessage" id="contactForm" novalidate>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>Full Name</label>
+                        <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+                        <p class="help-block"></p>
                     </div>
-                    <div class="control-group form-group">
-                        <div class="controls">
-                            <label>Phone Number</label>
-                            <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
-                        </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
                     </div>
-					<div class="control-group form-group">
-                        <div class="controls">
-                            <label>Event Date</label>
-                            <input type="date" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
-                        </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>Event Date</label>
+                        <input type="date" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
                     </div>
-                    <div class="control-group form-group">
-                        <div class="controls">
-                            <label>Email Address</label>
-                            <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
-                        </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>Email Address</label>
+                        <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
                     </div>
-                    <div class="control-group form-group">
-                        <div class="controls">
-                            <label>Description</label>
-                            <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
-                        </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label>Description</label>
+                        <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
                     </div>
-                    <div id="success"></div>
-                    <!-- For success/fail messages -->
-                    <button type="submit" class="btn cbtn">Book Now</button>
-                </form>
-            </div>
-			<div class="col-lg-6">					
-					<div class="col-lg-12">
-					   <h3 class="sub-heading">WEDDING EVENT</h3>
-						<p class="text-justify">
-							 With HappyWeddings, planning a wedding is that easy, Select A package, our wedding consultant will contact you swiftly to advise you on the most suitable options available within your selected package & within your budget. They can also answer any questions you might have. Convinced! Go ahead and book.
-						</p>						
-					</div>
-            </div>
-        </div><br>
-        <!-- /.row -->
-    </div>
-    <!-- /.container -->		
- <div class="container"><br>
- <H4>Galery</H4><hr>
- <div class="row">
-    <div class="col-sm-6 col-md-3" ng-repeat="image in images track by $index">
-        <img class="img-responsive img-thumbnail" ng-src="{{image.url}}"
-            data-toggle="modal" >
-    </div>
-  </div>
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div id="success"></div>
+                <!-- For success/fail messages -->
+                <button type="submit" class="btn cbtn">Book Now</button>
+            </form>
         </div>
-        <div class="modal-body">
-          <img class="img-responsive img-thumbnail" style="width:100%" id="modalImage" src="" alt="The awesome description">
+        <div class="col-lg-12">					
+                <div class="col-lg-12">
+                   <h3 class="sub-heading">WEDDING EVENT</h3>
+                    <p class="text-justify">
+                         With HappyWeddings, planning a wedding is that easy, Select A package, our wedding consultant will contact you swiftly to advise you on the most suitable options available within your selected package & within your budget. They can also answer any questions you might have. Convinced! Go ahead and book.
+                    </p>						
+                </div>
         </div>
-		<div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
+    </div><br>
+    <!-- /.row -->
 </div>
-	
+	    <!-- /.container -->		
+        <div class="container"><br>
+            <H4>SHOWCASE</H4><hr>
+            <div class="row">
+               <div class="col-sm-6 col-md-3" ng-repeat="image in images track by $index">
+                   <img class="img-responsive img-thumbnail" ng-src="{{image.url}}"
+                       data-toggle="modal" >
+               </div>
+             </div>
+             <!-- Modal -->
+             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+               <div class="modal-dialog modal-lg">
+                 <div class="modal-content">
+                   <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   </div>
+                   <div class="modal-body">
+                     <img class="img-responsive img-thumbnail" style="width:100%" id="modalImage" src="" alt="The awesome description">
+                   </div>
+                   <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
    <!-- Footer -->
     <footer class="py-5 bg-dark">
         <div class="container">

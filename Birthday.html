@@ -35,18 +35,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-			    <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						EVENTS                       
-					   </a>
-                            
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                        <a class="dropdown-item" href="Birthday.html">BIRTHDAY</a>
-                        <a class="dropdown-item" href="Wedding.html">WEDDING</a>
-                        <a class="dropdown-item" href="Corporate.html">CORPORATE</a>
-                    </div>
+			    <li class="nav-item">
+                    <a class="nav-link" href="Birthday.html">BIRTHDAY</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="Wedding.html">WEDDING</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Corporate.html">CORPORATE</a>
+                </li>
+                <li class="nav-item d-none">
                     <a class="nav-link" href="about.html">ABOUT</a>
                 </li>
                 <li class="nav-item">
@@ -60,7 +58,7 @@
     <div class="container page-content">
         <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 d-none">
                 <h3>Book Now</h3><BR>
                 <form name="sentMessage" id="contactForm" novalidate>
                     <div class="control-group form-group">
@@ -99,9 +97,9 @@
                     <button type="submit" class="btn cbtn">Book Now</button>
                 </form>
             </div>
-			<div class="col-lg-6">					
+			<div class="col-lg-12">					
 					<div class="col-lg-12">
-					   <h3 class="sub-heading">BIRTHDAY EVENT</h3>
+					   <h3 class="">BIRTHDAY EVENT</h3>
 						<p class="text-justify">
 							 With HappyBIRTHDAY, planning a birthday is that easy, Select A package, our birthday consultant will contact you swiftly to advise you on the most suitable options available within your selected package & within your budget. They can also answer any questions you might have. Convinced! Go ahead and book.
 						</p>						
@@ -112,7 +110,7 @@
     </div>
     <!-- /.container -->		
  <div class="container"><br>
- <H4>Showcase</H4><hr>
+ <H4 >SHOWCASE</H4><hr>
   <div class="row">
     <div class="col-sm-6 col-md-3" ng-repeat="image in images track by $index">
         <img class="img-responsive img-thumbnail" ng-src="{{image.url}}"

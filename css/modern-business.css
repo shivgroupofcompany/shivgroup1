@@ -26,7 +26,7 @@ body {
 } 
 
 .bg-dark {
-  background-color:black !important;
+  background-color:#1bac91 !important;
  }
 
 .nav-item  a{ 
@@ -39,7 +39,7 @@ body {
  -moz-transition: color .15s linear;
 }
 .nav-item a:hover ,.navbar-brand:hover {
- color:#1BAC91 !important;
+ color: #09715e !important;
 }
 .navbar-collapse{
     flex-basis: 85% ;
@@ -129,4 +129,9 @@ color:#1BAC91 !important;
 .thumbnail-image-home-page {
     width: 350px;
     height: 231px;
+}
+
+.jumbotron {
+    background-color: #1bac91;
+    color: white;  
 }
